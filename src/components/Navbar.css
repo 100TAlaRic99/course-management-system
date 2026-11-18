@@ -1,0 +1,238 @@
+
+/* =========================================
+   NAVBAR — CAMPUSLY
+   ========================================= */
+
+/* Remove the browser's default spacing from the page. */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #211d2b;
+}
+
+/* Main navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Responsive horizontal spacing */
+  padding: 18px clamp(20px, 6vw, 90px);
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeaf4;
+
+  /* Keep the navbar above normal page content. */
+  position: relative;
+  z-index: 10;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #211d2b;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -1px;
+  text-decoration: none;
+
+  /* Prevent the logo from shrinking when space is limited. */
+  flex-shrink: 0;
+}
+
+/* Purple icon background */
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+
+  background: linear-gradient(135deg, #8055e8, #6235c4);
+  color: #ffffff;
+  font-size: 21px;
+}
+
+/* Purple dot after the brand name */
+.logo-dot {
+  color: #8055e8;
+}
+
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 34px);
+
+  /* Remove the default bullets and spacing from <ul>. */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #686174;
+  font-size: 14px;
+  font-weight: 550;
+  text-decoration: none;
+
+  /* Smoothly animate colour changes on hover. */
+  transition: color 0.2s ease;
+}
+
+/* Highlight a link when the user points at it. */
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: #7546d8;
+}
+
+/* =========================================
+   LOGIN AND REGISTER ACTIONS
+   ========================================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.login-btn,
+.register-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 19px;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+
+  /* Button colour and movement change smoothly. */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Simple text-style login button */
+.login-btn {
+  color: #554a69;
+  background-color: transparent;
+}
+
+.login-btn:hover {
+  color: #7546d8;
+  background-color: #f5f0ff;
+}
+
+/* Main purple call-to-action button */
+.register-btn {
+  color: #ffffff;
+  background-color: #7546d8;
+  box-shadow: 0 4px 12px rgba(117, 70, 216, 0.15);
+}
+
+.register-btn:hover {
+  color: #ffffff;
+  background-color: #6235c4;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   RESPONSIVE NAVBAR
+   Adapt the layout for smaller screens.
+   ========================================= */
+
+/* Tablets and smaller laptops */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 24px;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 650px) {
+  .navbar {
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .navbar-links {
+    /* Put the navigation on its own row. */
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .login-btn,
+  .register-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+}
+
+/* Very narrow mobile screens */
+@media (max-width: 380px) {
+  .navbar {
+    padding: 14px 12px;
+  }
+
+  .navbar-logo {
+    gap: 6px;
+    font-size: 18px;
+  }
+
+  .navbar-actions {
+    gap: 2px;
+  }
+
+  .login-btn,
+  .register-btn {
+    padding: 8px;
+  }
+
+  .navbar-links {
+    gap: 10px 16px;
+  }
+}

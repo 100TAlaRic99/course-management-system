@@ -1,0 +1,38 @@
+
+/* =========================================
+   GLOBAL STYLES — CAMPUSLY
+   ========================================= */
+
+/* Remove default browser spacing and make sizing predictable. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling applied to the entire application. */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #211d2b;
+  min-height: 100vh;
+}
+
+/* Remove default link styling. */
+a {
+  text-decoration: none;
+}
+
+/* Make form elements inherit the application's font. */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Prevent images from overflowing their containers. */
+img {
+  max-width: 100%;
+  display: block;
+}
