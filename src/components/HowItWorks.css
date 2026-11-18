@@ -1,0 +1,128 @@
+/* Main section container */
+.how-it-works {
+  width: min(88%, 1250px);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+/* Section heading */
+.how-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.how-header > span {
+  color: #7c3aed;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.how-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #211d2b;
+  margin: 15px 0;
+  line-height: 1.3;
+}
+
+.how-header h2 span {
+  color: #7646e8;
+}
+
+.how-header p {
+  color: #858096;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Three step cards */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* Individual step card */
+.step-card {
+  position: relative;
+  padding: 35px 28px;
+  background: #fff;
+  border: 1px solid #eee8f7;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(40, 20, 70, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover animation */
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(40, 20, 70, 0.09);
+}
+
+/* Step number */
+.step-number {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: #e5dcfa;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Icon container */
+.step-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1eaff;
+  color: #7c3aed;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.step-card h3 {
+  color: #252132;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: #858096;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+  .steps-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .how-it-works {
+    width: 90%;
+    padding: 70px 0;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works {
+    padding: 55px 0;
+  }
+
+  .how-header {
+    margin-bottom: 35px;
+  }
+
+  .step-card {
+    padding: 30px 24px;
+  }
+}
