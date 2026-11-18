@@ -1,10 +1,10 @@
-
 import React from "react";
 
 // Import homepage components.
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import FeaturedCourses from "./components/FeaturedCourses";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
   return (
@@ -15,8 +15,11 @@ function App() {
       {/* Homepage introduction */}
       <Hero />
 
-      {/* Popular courses displayed below the hero section */}
+      {/* Featured courses */}
       <FeaturedCourses />
+
+      {/* Benefits of using Campusly */}
+      <WhyChooseUs />
     </>
   );
 }

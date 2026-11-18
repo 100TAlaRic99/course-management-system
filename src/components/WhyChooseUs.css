@@ -1,0 +1,159 @@
+
+/* =========================================
+   WHY CHOOSE US SECTION
+   ========================================= */
+
+.why-choose-us {
+  width: min(100% - 12%, 1250px);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+/* =========================================
+   SECTION HEADER
+   ========================================= */
+
+.why-header {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+/* Small section label */
+.why-header > span {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #7546d8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Main heading */
+.why-header h2 {
+  margin-bottom: 15px;
+
+  color: #211d2b;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+/* Highlighted heading text */
+.why-header h2 span {
+  color: #7546d8;
+}
+
+/* Supporting paragraph */
+.why-header p {
+  color: #777184;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   FEATURES GRID
+   ========================================= */
+
+.features-grid {
+  display: grid;
+
+  /* Four equal columns on larger screens. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================
+   INDIVIDUAL FEATURE CARD
+   ========================================= */
+
+.feature-card {
+  padding: 28px 23px;
+  border: 1px solid #eee9f5;
+  border-radius: 17px;
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 25px rgba(50, 32, 85, 0.04);
+
+  /* Smooth hover movement and shadow change. */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Lift the card slightly on hover. */
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(50, 32, 85, 0.09);
+}
+
+/* Feature icon container */
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+
+  background-color: #f1eaff;
+  color: #7546d8;
+  font-size: 23px;
+}
+
+/* Feature title */
+.feature-card h3 {
+  margin-bottom: 12px;
+
+  color: #292333;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Feature description */
+.feature-card p {
+  margin-bottom: 0;
+
+  color: #827b8e;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablets and smaller laptops: two columns. */
+@media (max-width: 1000px) {
+  .why-choose-us {
+    width: 90%;
+    padding: 70px 0;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile phones: one column. */
+@media (max-width: 600px) {
+  .why-choose-us {
+    padding: 55px 0;
+  }
+
+  .why-header {
+    margin-bottom: 35px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+}
+
+
