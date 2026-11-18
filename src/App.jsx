@@ -1,40 +1,31 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-// Import homepage components.
+// Layout components shown on every page.
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import FeaturedCourses from "./components/FeaturedCourses";
-import WhyChooseUs from "./components/WhyChooseUs";
-import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+
+// Page components (full screens).
+import Home from "./pages/Home";
+import Courses from "./pages/Courses";
 
 function App() {
   return (
     <>
-      {/* Website navigation */}
+      {/* Website navigation (visible on every page) */}
       <Navbar />
 
-      {/* Homepage introduction */}
-      <Hero />
+      {/* Routes shows only the page whose path matches the URL.
+          Every <Route> MUST be inside <Routes>. */}
+      <Routes>
+        {/* Homepage: localhost:5173/ */}
+        <Route path="/" element={<Home />} />
 
-      {/* Featured courses */}
-      <FeaturedCourses />
+        {/* Course catalogue: localhost:5173/courses */}
+        <Route path="/courses" element={<Courses />} />
+      </Routes>
 
-      {/* Benefits of using Campusly */}
-      <WhyChooseUs />
-
-      {/* Explains how students use Campusly */}
-      <HowItWorks />
-
-      {/* Student testimonials */}
-      <Testimonials />
-
-      {/* Encourages visitors to get started */}
-      <CTA />
-
-      {/* Website footer */}
+      {/* Website footer (visible on every page) */}
       <Footer />
     </>
   );
