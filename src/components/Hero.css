@@ -1,0 +1,429 @@
+
+/* =========================================
+   HERO SECTION
+   Main introductory section below the navbar.
+   ========================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  /* Keep the hero content centred and responsive. */
+  width: min(100% - 12%, 1250px);
+  min-height: 570px;
+  margin: 0 auto;
+  padding: 75px 0;
+}
+
+/* =========================================
+   LEFT SIDE — TEXT CONTENT
+   ========================================= */
+
+.hero-content {
+  flex: 1;
+  max-width: 570px;
+}
+
+/* Small introductory badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 15px;
+  border: 1px solid #e8defc;
+  border-radius: 30px;
+
+  background-color: #f7f2ff;
+  color: #7546d8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Main heading */
+.hero-content h1 {
+  margin: 25px 0 18px;
+
+  color: #211d2b;
+  font-size: clamp(38px, 4.5vw, 62px);
+  font-weight: 750;
+  line-height: 1.13;
+  letter-spacing: -2px;
+}
+
+/* Highlight the second part of the heading. */
+.hero-content h1 span {
+  display: block;
+  color: #7546d8;
+}
+
+/* Supporting paragraph */
+.hero-content > p {
+  max-width: 490px;
+  margin-bottom: 30px;
+
+  color: #777184;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   HERO BUTTONS
+   ========================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 22px;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+
+  /* Smooth transitions when hovering over buttons. */
+  transition: all 0.2s ease;
+}
+
+/* Primary purple button */
+.hero-primary-btn {
+  background-color: #7546d8;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(117, 70, 216, 0.18);
+}
+
+.hero-primary-btn:hover {
+  background-color: #6235c4;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Secondary button */
+.hero-secondary-btn {
+  background-color: #f5f2fa;
+  color: #554a69;
+}
+
+.hero-secondary-btn:hover {
+  background-color: #ece5f8;
+  color: #7546d8;
+}
+
+/* Supporting note below the buttons */
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 28px;
+  color: #777184;
+  font-size: 13px;
+}
+
+.hero-note i {
+  color: #269b70;
+}
+
+/* =========================================
+   RIGHT SIDE — LEARNING VISUAL
+   ========================================= */
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 0;
+  min-height: 390px;
+
+  border-radius: 35px;
+  background: linear-gradient(145deg, #f4efff, #faf7ff);
+}
+
+/* Main dashboard-style card */
+.hero-visual-card {
+  width: min(82%, 390px);
+  padding: 27px;
+
+  border: 1px solid #eee9f5;
+  border-radius: 20px;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 50px rgba(50, 32, 85, 0.10);
+}
+
+/* Dashboard card heading */
+.visual-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.visual-card-header span {
+  color: #9991a5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.visual-card-header h3 {
+  margin-top: 7px;
+  color: #211d2b;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* Decorative student avatar */
+.visual-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  background-color: #eee6ff;
+  color: #7546d8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================
+   COURSE PROGRESS
+   ========================================= */
+
+.visual-progress {
+  margin-bottom: 25px;
+}
+
+.visual-progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11px;
+
+  color: #777184;
+  font-size: 12px;
+}
+
+.visual-progress strong {
+  color: #7546d8;
+}
+
+/* Outer background track */
+.visual-progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #eee9f5;
+}
+
+/* Inner progress bar: currently showing 75%. */
+.visual-progress-track div {
+  width: 75%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #a17bea, #7546d8);
+}
+
+/* =========================================
+   COURSE ROWS
+   ========================================= */
+
+.visual-course {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 0;
+  border-top: 1px solid #f0edf4;
+}
+
+/* Course icon container */
+.visual-course-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 12px;
+
+  background-color: #eee6ff;
+  color: #7546d8;
+  font-size: 19px;
+}
+
+/* Different colour for the second course icon */
+.visual-course-icon-pink {
+  background-color: #fff0f3;
+  color: #d86b8d;
+}
+
+/* Course title and lesson information */
+.visual-course > div:nth-child(2) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.visual-course strong {
+  color: #342d40;
+  font-size: 12px;
+}
+
+.visual-course span {
+  color: #9991a5;
+  font-size: 11px;
+}
+
+.visual-course > i {
+  color: #9991a5;
+  font-size: 14px;
+}
+
+/* =========================================
+   FLOATING ACHIEVEMENT CARD
+   ========================================= */
+
+.hero-floating-card {
+  position: absolute;
+  right: -20px;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 18px;
+  border-radius: 14px;
+
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(50, 32, 85, 0.12);
+}
+
+/* Trophy icon background */
+.floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+
+  background-color: #fff4dc;
+  color: #e5a52b;
+}
+
+.hero-floating-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-floating-card strong {
+  color: #342d40;
+  font-size: 12px;
+}
+
+.hero-floating-card span {
+  color: #9991a5;
+  font-size: 10px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablets and smaller laptops */
+@media (max-width: 900px) {
+  .hero {
+    width: 90%;
+    gap: 30px;
+    padding: 60px 0;
+  }
+
+  .hero-visual {
+    min-height: 350px;
+  }
+
+  .hero-floating-card {
+    right: -8px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 650px) {
+  /* Stack the text and visual vertically. */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    gap: 45px;
+    padding: 55px 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(36px, 10vw, 48px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .hero-visual-card {
+    width: 85%;
+    padding: 22px;
+  }
+
+  .hero-floating-card {
+    right: 0;
+    bottom: -20px;
+  }
+}
+
+/* Very narrow mobile screens */
+@media (max-width: 380px) {
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+  }
+
+  .hero-visual-card {
+    width: 90%;
+    padding: 17px;
+  }
+}
